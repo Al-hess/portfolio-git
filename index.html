@@ -31,7 +31,7 @@
     content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
   />
 
-  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="icon" type="image/png" href="/assets/img/favicon.png" />
 
   <meta name="theme-color" content="#5540af" />
 
@@ -67,7 +67,7 @@
 
   <link
     crossorigin="anonymous"
-    href="assets/styles/main.min.css"
+    href="/assets/styles/main.min.css"
     media="screen"
     rel="stylesheet"
   />
@@ -80,6 +80,130 @@
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
   
+  <style>
+    :root {
+      --glass-bg: rgba(17, 24, 39, 0.8);
+      --glass-border: rgba(255, 255, 255, 0.1);
+      --accent-color: #5540af;
+      --accent-yellow: #ffc107;
+    }
+
+    [x-cloak] { display: none !important; }
+
+    .project-card-dark {
+      background: var(--glass-bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--glass-border);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-card-dark:hover {
+      transform: translateY(-8px) scale(1.02);
+      border-color: var(--accent-yellow);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.04), 0 0 20px rgba(255, 193, 7, 0.2);
+    }
+
+    .glass-modal {
+      background: rgba(0, 0, 0, 0.82);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .modal-content-dark {
+      background: linear-gradient(145deg, #0f172a 0%, #111827 60%, #1a1f35 100%);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: #f3f4f6;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+
+    .modal-content-dark::-webkit-scrollbar { width: 4px; }
+    .modal-content-dark::-webkit-scrollbar-track { background: transparent; }
+    .modal-content-dark::-webkit-scrollbar-thumb { background: var(--accent-color); border-radius: 2px; }
+
+    .shimmer {
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.05),
+        transparent
+      );
+      transition: 0.5s;
+    }
+
+    .project-card-dark:hover .shimmer {
+      left: 100%;
+      transition: 0.8s;
+    }
+
+    .badge-dark {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .tech-chip {
+      background: rgba(85, 64, 175, 0.18);
+      border: 1px solid rgba(85, 64, 175, 0.4);
+      color: #a78bfa;
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      display: inline-block;
+      transition: all 0.2s;
+    }
+
+    .tech-chip:hover {
+      background: rgba(85, 64, 175, 0.4);
+      color: #fff;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .feature-item:last-child { border-bottom: none; }
+
+    .feature-item i {
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .modal-header-banner {
+      background: linear-gradient(135deg, rgba(85,64,175,0.25) 0%, rgba(255,193,7,0.08) 100%);
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      border-radius: 1.5rem 1.5rem 0 0;
+      padding: 2rem 2.5rem 1.5rem;
+      margin: -2rem -2rem 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .modal-header-banner { margin: -3rem -3rem 2rem; padding: 2.5rem 3rem 2rem; }
+    }
+
+    .stat-pill {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 0.75rem;
+      padding: 0.75rem 1rem;
+      text-align: center;
+      flex: 1;
+    }
+  </style>
 </head>
 
 
@@ -106,7 +230,7 @@
   <div class="container flex items-center justify-between">
     <div>
       <a href="/">
-        <img src="assets/img/logo.svg" class="w-24 lg:w-48" alt="logo image" />
+        <img src="/assets/img/logo.svg" class="w-24 lg:w-48" alt="logo image" />
       </a>
     </div>
     <div class="hidden lg:block">
@@ -214,7 +338,7 @@
       class="absolute top-0 right-0 mt-4 mr-4"
       @click="mobileMenu = false"
     >
-      <img src="assets/img/icon-close.svg" class="h-10 w-auto" alt="" />
+      <img src="/assets/img/icon-close.svg" class="h-10 w-auto" alt="" />
     </button>
 
     <ul class="mt-8 flex flex-col">
@@ -289,7 +413,7 @@
 
       <div><div
   class="relative bg-cover bg-center bg-no-repeat py-8"
-  style="background-image: url(assets/img/bg-hero.jpg)"
+  style="background-image: url(/assets/img/bg-hero.jpg)"
 >
   <div
     class="absolute inset-0 z-20 bg-gradient-to-r from-hero-gradient-from to-hero-gradient-to bg-cover bg-center bg-no-repeat"
@@ -301,7 +425,7 @@
     <div class="flex flex-col items-center justify-center lg:flex-row">
       <div class="rounded-full border-8 border-primary shadow-xl">
         <img
-          src="assets/img/blog-author.jpg"
+          src="/assets/img/blog-author.jpg"
           class="h-48 rounded-full sm:h-56"
           alt="author"
         />
@@ -452,13 +576,13 @@
       <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
         <div class="hidden group-hover:block">
           <img
-            src="assets/img/icon-development-white.svg"
+            src="/assets/img/icon-development-white.svg"
             alt="development icon"
           />
         </div>
         <div class="block group-hover:hidden">
           <img
-            src="assets/img/icon-development-black.svg"
+            src="/assets/img/icon-development-black.svg"
             alt="development icon"
           />
         </div>
@@ -478,13 +602,13 @@
       <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
         <div class="hidden group-hover:block">
           <img
-            src="assets/img/icon-content-white.svg"
+            src="/assets/img/icon-content-white.svg"
             alt="content marketing icon"
           />
         </div>
         <div class="block group-hover:hidden">
           <img
-            src="assets/img/icon-content-black.svg"
+            src="/assets/img/icon-content-black.svg"
             alt="content marketing icon"
           />
         </div>
@@ -504,13 +628,13 @@
       <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
         <div class="hidden group-hover:block">
           <img
-            src="assets/img/icon-mobile-white.svg"
+            src="/assets/img/icon-mobile-white.svg"
             alt="Mobile Application icon"
           />
         </div>
         <div class="block group-hover:hidden">
           <img
-            src="assets/img/icon-mobile-black.svg"
+            src="/assets/img/icon-mobile-black.svg"
             alt="Mobile Application icon"
           />
         </div>
@@ -530,13 +654,13 @@
       <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
         <div class="hidden group-hover:block">
           <img
-            src="assets/img/icon-email-white.svg"
+            src="/assets/img/icon-email-white.svg"
             alt="Email Marketing icon"
           />
         </div>
         <div class="block group-hover:hidden">
           <img
-            src="assets/img/icon-email-black.svg"
+            src="/assets/img/icon-email-black.svg"
             alt="Email Marketing icon"
           />
         </div>
@@ -556,13 +680,13 @@
       <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
         <div class="hidden group-hover:block">
           <img
-            src="assets/img/icon-design-white.svg"
+            src="/assets/img/icon-design-white.svg"
             alt="Theme Design icon"
           />
         </div>
         <div class="block group-hover:hidden">
           <img
-            src="assets/img/icon-design-black.svg"
+            src="/assets/img/icon-design-black.svg"
             alt="Theme Design icon"
           />
         </div>
@@ -582,13 +706,13 @@
       <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
         <div class="hidden group-hover:block">
           <img
-            src="assets/img/icon-graphics-white.svg"
+            src="/assets/img/icon-graphics-white.svg"
             alt="Graphic Design icon"
           />
         </div>
         <div class="block group-hover:hidden">
           <img
-            src="assets/img/icon-graphics-black.svg"
+            src="/assets/img/icon-graphics-black.svg"
             alt="Graphic Design icon"
           />
         </div>
@@ -607,7 +731,82 @@
   </div>
 </div>
 
-<div class="container py-16 md:py-20" id="portfolio">
+<div 
+  class="container py-16 md:py-20" 
+  id="portfolio"
+  x-data="{
+    projects: [
+      {
+        name: 'time_travel_01',
+        title: 'Time Travel 01',
+        description: 'A full-stack web application exploring advanced temporal architecture concepts, event sourcing, and time-based data modeling using modern cloud infrastructure.',
+        icon: 'bx-time-five',
+        color: 'from-violet-600/30 to-purple-900/20',
+        tech: ['Python', 'Supabase', 'Streamlit', 'SQL', 'REST API'],
+        features: [
+          'Event sourcing & temporal data modeling',
+          'Real-time data synchronization with Supabase',
+          'Interactive Streamlit interface',
+          'RESTful API integration'
+        ],
+        liveUrl: null
+      },
+      {
+        name: 'ML_project',
+        title: 'ML Project',
+        description: 'End-to-end machine learning pipeline for business analytics — from data preprocessing and feature engineering to model training, evaluation, and visualization of results.',
+        icon: 'bx-brain',
+        color: 'from-blue-600/30 to-cyan-900/20',
+        tech: ['Python', 'scikit-learn', 'Pandas', 'Matplotlib', 'Jupyter'],
+        features: [
+          'Full ML pipeline from raw data to predictions',
+          'Feature engineering & selection techniques',
+          'Model comparison and evaluation metrics',
+          'Business-ready data visualizations'
+        ],
+        liveUrl: null
+      },
+      {
+        name: 'cook',
+        title: 'Kelia Cook',
+        description: 'A personal recipe and household activity management platform built for daily use — tracking meals, ingredients, and lifestyle habits in one beautiful interface.',
+        icon: 'bx-bowl-hot',
+        color: 'from-amber-600/30 to-orange-900/20',
+        tech: ['Python', 'Streamlit', 'Supabase', 'PostgreSQL'],
+        features: [
+          'Recipe CRUD with ingredient management',
+          'Persistent cloud database via Supabase',
+          'Rat counter & activity tracking modules',
+          'Mobile-friendly responsive interface'
+        ],
+        liveUrl: 'https://kelia-cook.streamlit.app'
+      }
+    ],
+    selectedProject: null,
+    modalOpen: false,
+    loading: false,
+    async openProject(project) {
+        this.selectedProject = { ...project, details: null };
+        this.modalOpen = true;
+        this.loading = true;
+        document.body.style.overflow = 'hidden';
+        try {
+            const response = await fetch(`https://api.github.com/repos/Al-hess/${project.name}`);
+            if (response.ok) {
+                this.selectedProject.details = await response.json();
+            }
+        } catch (e) {
+            console.error('Fetch error:', e);
+        } finally {
+            this.loading = false;
+        }
+    },
+    closeModal() {
+        this.modalOpen = false;
+        document.body.style.overflow = '';
+    }
+  }"
+>
   <h2
     class="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl"
   >
@@ -620,54 +819,190 @@
   </h3>
 
   <div
-    class="mx-auto grid w-full grid-cols-1 gap-8 pt-12 sm:w-3/4 md:gap-10 lg:w-full lg:grid-cols-2"
+    class="mx-auto grid w-full grid-cols-1 gap-8 pt-12 sm:w-3/4 md:gap-10 lg:w-full lg:grid-cols-3"
   >
-    <a
-      href="/"
-      class="mx-auto transform transition-all hover:scale-105 md:mx-0"
+    <template x-for="project in projects" :key="project.name">
+      <div 
+        @click="openProject(project)"
+        class="project-card-dark cursor-pointer rounded-2xl p-8 flex flex-col justify-between h-full group"
+      >
+        <div class="shimmer"></div>
+        <div>
+          <div class="flex justify-between items-start mb-6">
+            <div class="p-3 rounded-lg bg-primary/20 text-yellow group-hover:bg-yellow group-hover:text-primary transition-colors">
+              <i class="bx text-3xl" :class="project.icon"></i>
+            </div>
+            <div class="flex items-center space-x-2 text-primary group-hover:text-yellow transition-colors">
+              <i class="bx bxl-github text-2xl"></i>
+              <span class="font-bold text-sm">GitHub</span>
+            </div>
+          </div>
+          <h3 
+            x-text="project.title"
+            class="font-header text-2xl font-bold text-white mb-3 group-hover:text-yellow transition-colors"
+          ></h3>
+          <p 
+            x-text="project.description"
+            class="font-body text-sm text-grey-20 leading-relaxed mb-5 line-clamp-3"
+          ></p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <template x-for="t in project.tech.slice(0,3)" :key="t">
+              <span class="tech-chip" x-text="t"></span>
+            </template>
+            <template x-if="project.tech.length > 3">
+              <span class="tech-chip opacity-60" x-text="'+' + (project.tech.length - 3) + ' more'"></span>
+            </template>
+          </div>
+        </div>
+        
+        <div class="flex items-center justify-between mt-auto pt-4 border-t border-white/5">
+          <span class="text-xs font-semibold uppercase tracking-wider text-grey-40 group-hover:text-white transition-colors">
+            View Details &rarr;
+          </span>
+          <div class="h-1 w-12 bg-primary group-hover:w-24 group-hover:bg-yellow transition-all duration-300 rounded-full"></div>
+        </div>
+      </div>
+    </template>
+  </div>
+
+  <!-- Project Modal -->
+  <div 
+    x-show="modalOpen" 
+    x-cloak
+    class="fixed inset-0 z-100 flex items-center justify-center p-4 glass-modal"
+    @keydown.escape.window="closeModal()"
+    x-transition:enter="transition ease-out duration-300"
+    x-transition:enter-start="opacity-0"
+    x-transition:enter-end="opacity-100"
+    x-transition:leave="transition ease-in duration-200"
+    x-transition:leave-start="opacity-100"
+    x-transition:leave-end="opacity-0"
+  >
+    <div 
+      @click.self="closeModal()"
+      class="w-full max-w-4xl"
+      x-transition:enter="transition ease-out duration-300 delay-100"
+      x-transition:enter-start="opacity-0 translate-y-8"
+      x-transition:enter-end="opacity-100 translate-y-0"
     >
-      <img
-        src="assets/img/portfolio-apple.jpeg"
-        class="w-full shadow"
-        alt="portfolio image"
-      />
-    </a>
-    <a
-      href="/"
-      class="mx-auto transform transition-all hover:scale-105 md:mx-0"
-    >
-      <img
-        src="assets/img/portfolio-stripe.jpeg"
-        class="w-full shadow"
-        alt="portfolio image"
-      />
-    </a>
-    <a
-      href="/"
-      class="mx-auto transform transition-all hover:scale-105 md:mx-0"
-    >
-      <img
-        src="assets/img/portfolio-fedex.jpeg"
-        class="w-full shadow"
-        alt="portfolio image"
-      />
-    </a>
-    <a
-      href="/"
-      class="mx-auto transform transition-all hover:scale-105 md:mx-0"
-    >
-      <img
-        src="assets/img/portfolio-microsoft.jpeg"
-        class="w-full shadow"
-        alt="portfolio image"
-      />
-    </a>
+    <div class="modal-content-dark rounded-3xl p-8 md:p-12 shadow-2xl relative">
+      <!-- Ambient glows -->
+      <div class="absolute -top-32 -right-32 w-80 h-80 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute -bottom-32 -left-32 w-80 h-80 bg-yellow/5 rounded-full blur-3xl pointer-events-none"></div>
+
+      <button 
+        @click="closeModal()" 
+        class="absolute top-5 right-5 w-10 h-10 flex items-center justify-center rounded-full bg-white/10 text-grey-40 hover:bg-white/20 hover:text-white transition-all z-20"
+        id="modal-close-btn"
+      >
+        <i class="bx bx-x text-2xl"></i>
+      </button>
+
+      <div class="relative z-10">
+        <template x-if="!loading && selectedProject">
+          <div>
+            <!-- Header Banner -->
+            <div class="modal-header-banner">
+              <div class="flex flex-wrap items-center gap-3 mb-3">
+                <div class="p-3 rounded-xl bg-primary/20">
+                  <i class="bx text-3xl text-yellow" :class="selectedProject.icon"></i>
+                </div>
+                <div>
+                  <h2 x-text="selectedProject.title" class="text-3xl md:text-4xl font-header font-bold text-white leading-tight"></h2>
+                  <div class="flex items-center gap-2 mt-1">
+                    <template x-if="selectedProject.details?.language">
+                      <span class="badge-dark px-3 py-0.5 rounded-full text-xs font-bold text-yellow uppercase tracking-widest" x-text="selectedProject.details.language"></span>
+                    </template>
+                    <span class="text-xs text-grey-40 uppercase font-semibold tracking-wider" x-text="selectedProject.details?.visibility || 'Public'"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Stats row -->
+            <div class="flex gap-3 mb-8">
+              <div class="stat-pill">
+                <span class="block text-xl font-bold text-white" x-text="selectedProject.details?.stargazers_count ?? '—'"></span>
+                <span class="text-xs text-grey-40 uppercase tracking-wide">Stars</span>
+              </div>
+              <div class="stat-pill">
+                <span class="block text-xl font-bold text-white" x-text="selectedProject.details?.forks_count ?? '—'"></span>
+                <span class="text-xs text-grey-40 uppercase tracking-wide">Forks</span>
+              </div>
+              <div class="stat-pill">
+                <span class="block text-sm font-bold text-white" x-text="selectedProject.details ? new Date(selectedProject.details.updated_at).toLocaleDateString() : '—'"></span>
+                <span class="text-xs text-grey-40 uppercase tracking-wide">Last Update</span>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-8">
+              <!-- Left: Description + Features -->
+              <div class="md:col-span-3">
+                <h4 class="text-xs font-bold text-primary uppercase tracking-widest mb-3">About</h4>
+                <p x-text="selectedProject.description" class="text-base text-grey-20 leading-relaxed mb-6"></p>
+
+                <h4 class="text-xs font-bold text-primary uppercase tracking-widest mb-3">Key Features</h4>
+                <div class="space-y-1 mb-8">
+                  <template x-for="feature in selectedProject.features" :key="feature">
+                    <div class="feature-item">
+                      <i class="bx bx-check-circle text-lg text-yellow"></i>
+                      <span class="text-sm text-grey-20" x-text="feature"></span>
+                    </div>
+                  </template>
+                </div>
+              </div>
+
+              <!-- Right: Tech + Actions -->
+              <div class="md:col-span-2 flex flex-col gap-6">
+                <div class="bg-white/5 rounded-2xl p-5 border border-white/10">
+                  <h4 class="text-xs font-bold text-grey-40 uppercase tracking-widest mb-4">Tech Stack</h4>
+                  <div class="flex flex-wrap gap-2">
+                    <template x-for="t in selectedProject.tech" :key="t">
+                      <span class="tech-chip" x-text="t"></span>
+                    </template>
+                  </div>
+                </div>
+
+                <div class="flex flex-col gap-3">
+                  <a 
+                    :href="'https://github.com/Al-hess/' + selectedProject.name" 
+                    target="_blank" 
+                    class="flex items-center justify-center gap-2 rounded-xl bg-primary px-6 py-3 text-sm font-bold text-white hover:bg-yellow hover:text-primary transition-all shadow-lg"
+                  >
+                    <i class="bx bxl-github text-xl"></i>
+                    View on GitHub
+                  </a>
+                  <template x-if="selectedProject.liveUrl">
+                    <a 
+                      :href="selectedProject.liveUrl" 
+                      target="_blank"
+                      class="flex items-center justify-center gap-2 rounded-xl bg-white/10 border border-white/20 px-6 py-3 text-sm font-bold text-white hover:bg-yellow/20 hover:border-yellow transition-all"
+                    >
+                      <i class="bx bx-link-external text-xl"></i>
+                      Live Demo
+                    </a>
+                  </template>
+                </div>
+              </div>
+            </div>
+          </div>
+        </template>
+        
+        <template x-if="loading">
+            <div class="flex flex-col items-center justify-center py-24 gap-4">
+                <div class="animate-spin rounded-full h-14 w-14 border-4 border-primary border-t-yellow"></div>
+                <p class="text-grey-40 text-sm uppercase tracking-widest">Loading project data…</p>
+            </div>
+        </template>
+      </div>
+    </div>
+    </div>
   </div>
 </div>
 
 <div
   class="bg-cover bg-top bg-no-repeat pb-16 md:py-16 lg:py-24"
-  style="background-image: url(assets/img/experience-figure.png)"
+  style="background-image: url(/assets/img/experience-figure.png)"
   id="statistics"
 >
   <div class="container">
@@ -680,14 +1015,14 @@
         >
           <div>
             <img
-              src="assets/img/icon-project.svg"
+              src="/assets/img/icon-project.svg"
               class="mx-auto h-12 w-auto md:h-20"
               alt="icon project"
             />
           </div>
           <div class="pt-5 md:pl-5 md:pt-0">
             <h1 class="font-body text-2xl font-bold text-primary md:text-4xl">
-              12
+              3
             </h1>
             <h4
               class="text-grey-dark font-header text-base font-medium leading-loose md:text-xl"
@@ -702,7 +1037,7 @@
         >
           <div>
             <img
-              src="assets/img/icon-award.svg"
+              src="/assets/img/icon-award.svg"
               class="mx-auto h-12 w-auto md:h-20"
               alt="icon award"
             />
@@ -724,19 +1059,19 @@
         >
           <div>
             <img
-              src="assets/img/icon-happy.svg"
+              src="/assets/img/icon-happy.svg"
               class="mx-auto h-12 w-auto md:h-20"
               alt="icon happy clients"
             />
           </div>
           <div class="pt-5 md:pl-5 md:pt-0">
             <h1 class="font-body text-2xl font-bold text-primary md:text-4xl">
-              8
+              5
             </h1>
             <h4
               class="text-grey-dark font-header text-base font-medium leading-loose md:text-xl"
             >
-              Happy Clients
+              Datacamp courses completed
             </h4>
           </div>
         </div>
@@ -746,7 +1081,7 @@
         >
           <div>
             <img
-              src="assets/img/icon-puzzle.svg"
+              src="/assets/img/icon-puzzle.svg"
               class="mx-auto h-12 w-auto md:h-20"
               alt="icon puzzle"
             />
@@ -781,7 +1116,7 @@
     </h4>
     <div class="flex justify-center pt-10">
       <a
-        href="assets/cv.pdf"
+        href="/assets/cv.pdf"
         download
         class="rounded bg-primary px-8 py-4 font-body text-lg font-semibold text-white hover:bg-yellow"
       >
@@ -795,51 +1130,14 @@
   <h2
     class="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl"
   >
-    Here's a contact form
+    Get In Touch
   </h2>
   <h4
     class="pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl"
   >
-    Have Any Questions?
+    Feel free to reach out anytime
   </h4>
-  <div class="mx-auto w-full pt-5 text-center sm:w-2/3 lg:pt-6">
-    <p class="font-body text-grey-10">
-      Lorem ipsum dolor sit amet consectetur adipiscing elit hendrerit
-      condimentum turpis nisl sem, viverra habitasse urna ante lobortis
-      fermentum accumsan. Viverra habitasse urna ante lobortis fermentum
-      accumsan.
-    </p>
-  </div>
-  <form class="mx-auto w-full pt-10 sm:w-3/4">
-    <div class="flex flex-col md:flex-row">
-      <input
-        class="mr-3 w-full rounded border-grey-50 px-4 py-3 font-body text-black md:w-1/2 lg:mr-5"
-        placeholder="Name"
-        type="text"
-        id="name"
-      />
-      <input
-        class="mt-6 w-full rounded border-grey-50 px-4 py-3 font-body text-black md:mt-0 md:ml-3 md:w-1/2 lg:ml-5"
-        placeholder="Email"
-        type="text"
-        id="email"
-      />
-    </div>
-    <textarea
-      class="mt-6 w-full rounded border-grey-50 px-4 py-3 font-body text-black md:mt-8"
-      placeholder="Message"
-      id="message"
-      cols="30"
-      rows="10"
-    ></textarea>
-    <button
-      class="mt-6 flex items-center justify-center rounded bg-primary px-8 py-3 font-header text-lg font-bold uppercase text-white hover:bg-grey-20"
-    >
-      Send
-      <i class="bx bx-chevron-right relative -right-2 text-3xl"></i>
-    </button>
-  </form>
-  <div class="flex flex-col pt-16 lg:flex-row">
+  <div class="flex flex-col pt-12 lg:flex-row">
     <div
       class="w-full border-l-2 border-t-2 border-r-2 border-b-2 border-grey-60 px-6 py-6 sm:py-8 lg:w-1/3"
     >
@@ -850,7 +1148,7 @@
         </p>
       </div>
       <p class="pt-2 text-left font-body font-bold text-primary lg:text-lg">
-        (+881) 111 222 333
+        (+41) 79 351 12 26
       </p>
     </div>
     <div
@@ -863,7 +1161,7 @@
         </p>
       </div>
       <p class="pt-2 text-left font-body font-bold text-primary lg:text-lg">
-        name@mydomain.com
+        fasano.ale@gmail.com
       </p>
     </div>
     <div
@@ -872,11 +1170,9 @@
       <div class="flex items-center">
         <i class="bx bx-map text-2xl text-grey-40"></i>
         <p class="pl-2 font-body font-bold uppercase text-grey-40 lg:text-lg">
-          My Address
         </p>
       </div>
       <p class="pt-2 text-left font-body font-bold text-primary lg:text-lg">
-        123 New York D Block 1100, 2011 USA
       </p>
     </div>
   </div>
@@ -911,7 +1207,7 @@
 
     </div>
 
-    <script src="assets/js/main.js"></script>
+    <script src="/assets/js/main.js"></script>
 
     
   </body>
