@@ -542,7 +542,7 @@
       </div>
       <div class="pt-6">
         <div class="flex items-end justify-between">
-          <h4 class="font-body font-semibold uppercase text-black">R</h4>
+          <h4 class="font-body font-semibold uppercase text-black">SQL</h4>
           <h3 class="font-body text-3xl font-bold text-primary">70%</h3>
         </div>
         <div class="mt-2 h-3 w-full rounded-full bg-lila">
@@ -554,7 +554,7 @@
           <h4 class="font-body font-semibold uppercase text-black">
             Power BI
           </h4>
-          <h3 class="font-body text-3xl font-bold text-primary">98%</h3>
+          <h3 class="font-body text-3xl font-bold text-primary">70%</h3>
         </div>
         <div class="mt-2 h-3 w-full rounded-full bg-lila">
           <div class="h-3 rounded-full bg-primary" style="width: 98%"></div>
@@ -563,7 +563,7 @@
       <div class="pt-6">
         <div class="flex items-end justify-between">
           <h4 class="font-body font-semibold uppercase text-black">Microsoft Office</h4>
-          <h3 class="font-body text-3xl font-bold text-primary">91%</h3>
+          <h3 class="font-body text-3xl font-bold text-primary">90%</h3>
         </div>
         <div class="mt-2 h-3 w-full rounded-full bg-lila">
           <div class="h-3 rounded-full bg-primary" style="width: 91%"></div>
@@ -677,7 +677,7 @@
       {
         name: 'time_travel_01',
         title: 'Time Travel 01',
-        description: 'A full-stack web application exploring advanced temporal architecture concepts, event sourcing, and time-based data modeling using modern cloud infrastructure.',
+        description: 'Developed a Streamlit application for a fictional time travel company, with an emphasis on designing and structuring a relational database using Supabase. Feel free to wake up the app and book on the trip using the demo.',
         icon: 'bx-time-five',
         color: 'from-violet-600/30 to-purple-900/20',
         tech: ['Python', 'Supabase', 'Streamlit', 'SQL', 'REST API'],
@@ -692,7 +692,7 @@
       {
         name: 'ML_project',
         title: 'ML Project',
-        description: 'End-to-end machine learning pipeline for business analytics — from data preprocessing and feature engineering to model training, evaluation, and visualization of results.',
+        description: 'End-to-end machine learning pipeline for business analytics, covering data preprocessing, feature engineering, model training, evaluation, and result visualization. A detailed report is available for a deeper explanation of the methodology and underlying mathematical concepts. The code is available on GitHub, and the project is based on datasets sourced from Kaggle.',
         icon: 'bx-brain',
         color: 'from-blue-600/30 to-cyan-900/20',
         tech: ['Python', 'scikit-learn', 'Pandas', 'Matplotlib', 'Jupyter'],
@@ -708,7 +708,7 @@
       {
         name: 'cook',
         title: 'Cooking app',
-        description: 'A personal recipe and household activity management platform built for daily use — tracking meals, ingredients, and lifestyle habits in one beautiful interface.',
+        description: 'A daily-use application to track recipes, activities, and movies to explore, built using Streamlit with a Supabase backend.',
         icon: 'bx-bowl-hot',
         color: 'from-amber-600/30 to-orange-900/20',
         tech: ['Python', 'Streamlit', 'Supabase', 'PostgreSQL'],
@@ -945,89 +945,69 @@
 <div
   class="py-16 md:py-20"
   style="background: linear-gradient(180deg, #f3f0ff 0%, #ffffff 100%)"
-  id="statistics"
+  id="timeline"
 >
   <div class="container">
-    <div
-      class="mx-auto w-5/6 bg-white py-16 shadow md:w-11/12 lg:py-20 xl:py-24 2xl:w-full"
-    >
-      <div class="grid grid-cols-2 gap-5 md:gap-8 xl:grid-cols-4 xl:gap-5">
-        <div
-          class="flex flex-col items-center justify-center text-center md:flex-row md:text-left"
-        >
-          <div>
-            <i class="bx bx-folder-open text-5xl text-primary md:text-7xl"></i>
-          </div>
-          <div class="pt-5 md:pl-5 md:pt-0">
-            <h1 class="font-body text-2xl font-bold text-primary md:text-4xl">
-              3
-            </h1>
-            <h4
-              class="text-grey-dark font-header text-base font-medium leading-loose md:text-xl"
-            >
-              Finished Projects
-            </h4>
-          </div>
+    <div class="mx-auto w-full md:w-3/4 lg:w-2/3 bg-white p-10 md:p-14 shadow-xl rounded-2xl">
+      <h2 class="text-center font-header text-3xl font-semibold uppercase text-primary sm:text-4xl lg:text-5xl mb-12">
+        My Journey
+      </h2>
+      <div class="relative border-l-4 border-primary/20 ml-2 md:ml-4">
+      
+        <!-- Item 1: 2019 -->
+        <div class="mb-10 ml-8 relative group">
+          <div class="absolute -left-[43px] mt-1.5 w-6 h-6 rounded-full bg-yellow border-4 border-white shadow group-hover:scale-110 transition-transform"></div>
+          <span class="text-yellow font-bold tracking-widest uppercase text-sm">2019</span>
+          <h3 class="font-header text-xl md:text-2xl font-bold text-primary mt-1">1 Year in the UK</h3>
+          <p class="mt-2 text-grey-20 font-body leading-relaxed">
+            Spent a full year in the United Kingdom immersing in the language and gaining invaluable international experience.
+          </p>
         </div>
 
-        <div
-          class="flex flex-col items-center justify-center text-center md:flex-row md:text-left"
-        >
-          <div>
-            <i class="bx bx-trophy text-5xl text-primary md:text-7xl"></i>
-          </div>
-          <div class="pt-5 md:pl-5 md:pt-0">
-            <h1 class="font-body text-2xl font-bold text-primary md:text-4xl">
-              3
-            </h1>
-            <h4
-              class="text-grey-dark font-header text-base font-medium leading-loose md:text-xl"
-            >
-              Awards Won
-            </h4>
-          </div>
+        <!-- Item 2: 2021 -->
+        <div class="mb-10 ml-8 relative group">
+          <div class="absolute -left-[43px] mt-1.5 w-6 h-6 rounded-full bg-primary border-4 border-white shadow group-hover:scale-110 transition-transform"></div>
+          <span class="text-primary font-bold tracking-widest uppercase text-sm">2021</span>
+          <h3 class="font-header text-xl md:text-2xl font-bold text-primary mt-1">Start of University</h3>
+          <p class="mt-2 text-grey-20 font-body leading-relaxed">
+            Began my academic journey by starting a Bachelor's degree in Economics, building a strong foundation in analytical design.
+          </p>
         </div>
 
-        <div
-          class="mt-6 flex flex-col items-center justify-center text-center md:mt-10 md:flex-row md:text-left lg:mt-0"
-        >
-          <div>
-            <i class="bx bx-book-open text-5xl text-primary md:text-7xl"></i>
-          </div>
-          <div class="pt-5 md:pl-5 md:pt-0">
-            <h1 class="font-body text-2xl font-bold text-primary md:text-4xl">
-              5
-            </h1>
-            <h4
-              class="text-grey-dark font-header text-base font-medium leading-loose md:text-xl"
-            >
-              Datacamp courses completed
-            </h4>
-          </div>
+        <!-- Item 3: 2024 -->
+        <div class="mb-10 ml-8 relative group">
+          <div class="absolute -left-[43px] mt-1.5 w-6 h-6 rounded-full bg-yellow border-4 border-white shadow group-hover:scale-110 transition-transform"></div>
+          <span class="text-yellow font-bold tracking-widest uppercase text-sm">2024</span>
+          <h3 class="font-header text-xl md:text-2xl font-bold text-primary mt-1">Graduation & Teaching</h3>
+          <p class="mt-2 text-grey-20 font-body leading-relaxed">
+            Successfully completed my Bachelor's degree and launched my career by beginning to work as a coding teacher.
+          </p>
         </div>
 
-        <div
-          class="mt-6 flex flex-col items-center justify-center text-center md:mt-10 md:flex-row md:text-left lg:mt-0"
-        >
-          <div>
-            <i class="bx bx-bug text-5xl text-primary md:text-7xl"></i>
-          </div>
-          <div class="pt-5 md:pl-5 md:pt-0">
-            <h1 class="font-body text-2xl font-bold text-primary md:text-4xl">
-              99
-            </h1>
-            <h4
-              class="text-grey-dark font-header text-base font-medium leading-loose md:text-xl"
-            >
-              Bugs Fixed
-            </h4>
-          </div>
+        <!-- Item 4: Early 2025 -->
+        <div class="mb-10 ml-8 relative group">
+          <div class="absolute -left-[43px] mt-1.5 w-6 h-6 rounded-full bg-primary border-4 border-white shadow group-hover:scale-110 transition-transform"></div>
+          <span class="text-primary font-bold tracking-widest uppercase text-sm">Early 2025</span>
+          <h3 class="font-header text-xl md:text-2xl font-bold text-primary mt-1">Military Service</h3>
+          <p class="mt-2 text-grey-20 font-body leading-relaxed">
+            Completed mandatory military service, an experience that instilled strong discipline and teamwork skills.
+          </p>
         </div>
+
+        <!-- Item 5: Late 2025 -->
+        <div class="mb-2 ml-8 relative group">
+          <div class="absolute -left-[43px] mt-1.5 w-6 h-6 rounded-full bg-yellow border-4 border-white shadow animate-pulse"></div>
+          <span class="text-yellow font-bold tracking-widest uppercase text-sm">Late 2025</span>
+          <h3 class="font-header text-xl md:text-2xl font-bold text-primary mt-1">Master's in Business Analytics</h3>
+          <p class="mt-2 text-grey-20 font-body leading-relaxed">
+            Started the Master's degree program in Business Analytics to deepen my expertise in data science and advanced modeling.
+          </p>
+        </div>
+
       </div>
     </div>
   </div>
 </div>
-
 <div class="bg-grey-50" id="cv">
   <div class="container py-16 md:py-20">
     <h2
@@ -1096,9 +1076,11 @@
       <div class="flex items-center">
         <i class="bx bx-map text-2xl text-grey-40"></i>
         <p class="pl-2 font-body font-bold uppercase text-grey-40 lg:text-lg">
+          Address 
         </p>
       </div>
       <p class="pt-2 text-left font-body font-bold text-primary lg:text-lg">
+        Chemin de Grassiaz 6, Echichens 
       </p>
     </div>
   </div>
