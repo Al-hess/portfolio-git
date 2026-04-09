@@ -742,7 +742,8 @@
           'Model comparison and evaluation metrics',
           'Business-ready data visualizations'
         ],
-        liveUrl: null
+        liveUrl: null,
+        reportUrl: '/assets/ML_Report.pdf'
       },
       {
         name: 'cook',
@@ -900,14 +901,6 @@
             <!-- Stats row -->
             <div class="flex gap-3 mb-8">
               <div class="stat-pill">
-                <span class="block text-xl font-bold text-white" x-text="selectedProject.details?.stargazers_count ?? '—'"></span>
-                <span class="text-xs text-grey-40 uppercase tracking-wide">Stars</span>
-              </div>
-              <div class="stat-pill">
-                <span class="block text-xl font-bold text-white" x-text="selectedProject.details?.forks_count ?? '—'"></span>
-                <span class="text-xs text-grey-40 uppercase tracking-wide">Forks</span>
-              </div>
-              <div class="stat-pill">
                 <span class="block text-sm font-bold text-white" x-text="selectedProject.details ? new Date(selectedProject.details.updated_at).toLocaleDateString() : '—'"></span>
                 <span class="text-xs text-grey-40 uppercase tracking-wide">Last Update</span>
               </div>
@@ -958,6 +951,17 @@
                     >
                       <i class="bx bx-link-external text-xl"></i>
                       Live Demo
+                    </a>
+                  </template>
+
+                  <template x-if="selectedProject.reportUrl">
+                    <a 
+                      :href="selectedProject.reportUrl" 
+                      target="_blank"
+                      class="flex items-center justify-center gap-2 rounded-xl bg-yellow/10 border border-yellow/30 px-6 py-3 text-sm font-bold text-yellow hover:bg-yellow hover:text-primary transition-all shadow-lg"
+                    >
+                      <i class="bx bxs-file-pdf text-xl"></i>
+                      View Project Report
                     </a>
                   </template>
                 </div>
