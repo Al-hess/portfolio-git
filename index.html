@@ -309,19 +309,7 @@
           ></span>
         </li>
         
-        <li class="group pl-6">
-          
-          <span
-            @click="triggerNavItem('#services')"
-            class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-            >Services</span
-          >
-          
-          <span
-            class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
-          ></span>
-        </li>
-        
+
         <li class="group pl-6">
           
           <span
@@ -413,16 +401,7 @@
         
       </li>
       
-      <li class="py-2">
-        
-        <span
-          @click="triggerMobileNavItem('#services')"
-          class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-          >Services</span
-        >
-        
-      </li>
-      
+
       <li class="py-2">
         
         <span
@@ -543,13 +522,13 @@
         </div>
         <div>
           <h4 class="font-header text-xl font-semibold uppercase text-black mb-5 flex items-center">
-            <i class="bx bx-user-voice text-2xl text-primary mr-2"></i>Soft Skills
+            <i class="bx bx-user-voice text-2xl text-primary mr-2"></i>Soft 
           </h4>
           <ul class="text-grey-20 font-body space-y-4">
             <li class="flex items-start"><i class="bx bx-check text-2xl text-primary mr-2 -mt-0.5"></i>Team Leadership</li>
-            <li class="flex items-start"><i class="bx bx-check text-2xl text-primary mr-2 -mt-0.5"></i>Teaching & Mentorship</li>
+            <li class="flex items-start"><i class="bx bx-check text-2xl text-primary mr-2 -mt-0.5"></i>Teaching & clear communication</li>
             <li class="flex items-start"><i class="bx bx-check text-2xl text-primary mr-2 -mt-0.5"></i>Analytical Problem Solving</li>
-            <li class="flex items-start"><i class="bx bx-check text-2xl text-primary mr-2 -mt-0.5"></i>Bilingual (EN / FR)</li>
+            <li class="flex items-start"><i class="bx bx-check text-2xl text-primary mr-2 -mt-0.5"></i>Languages (EN / FR / IT)</li>
           </ul>
         </div>
       </div>
@@ -557,115 +536,6 @@
   </div>
 </div>
 
-<div class="container py-16 md:py-20" id="services">
-  <h2
-    class="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl"
-  >
-    Here's what I'm good at
-  </h2>
-  <h3
-    class="pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl"
-  >
-    These are the services Ioffer
-  </h3>
-
-  <div
-    class="grid grid-cols-1 gap-6 pt-10 sm:grid-cols-2 md:gap-10 md:pt-12 lg:grid-cols-3"
-  >
-    <div class="group rounded px-8 py-12 shadow hover:bg-primary">
-      <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28 flex items-center justify-center">
-        <i class="bx bx-code-alt text-6xl text-primary group-hover:text-yellow"></i>
-      </div>
-      <div class="text-center">
-        <h3 class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow lg:text-xl">
-          WEB DEVELOPMENT
-        </h3>
-        <p class="text-grey pt-4 text-sm group-hover:text-white md:text-base">
-          Building modern, responsive web applications and dashboards.
-        </p>
-      </div>
-    </div>
-    <div class="group rounded px-8 py-12 shadow hover:bg-primary">
-      <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28 flex items-center justify-center">
-        <i class="bx bx-file text-6xl text-primary group-hover:text-yellow"></i>
-      </div>
-      <div class="text-center">
-        <h3 class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow lg:text-xl">
-          Technical Writing
-        </h3>
-        <p class="text-grey pt-4 text-sm group-hover:text-white md:text-base">
-          Clear and structured technical documentation and reporting.
-        </p>
-      </div>
-    </div>
-    <div class="group rounded px-8 py-12 shadow hover:bg-primary">
-      <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28 flex items-center justify-center">
-        <i class="bx bx-bar-chart-alt-2 text-6xl text-primary group-hover:text-yellow"></i>
-      </div>
-      <div class="text-center">
-        <h3 class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow lg:text-xl">
-          Data Analysis
-        </h3>
-        <p class="text-grey pt-4 text-sm group-hover:text-white md:text-base">
-          Turning raw data into actionable insights with Python & R.
-        </p>
-      </div>
-    </div>
-    <div class="group rounded px-8 py-12 shadow hover:bg-primary">
-      <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28 flex items-center justify-center">
-        <i class="bx bx-brain text-6xl text-primary group-hover:text-yellow"></i>
-      </div>
-      <div class="text-center">
-        <h3 class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow lg:text-xl">
-          Machine Learning
-        </h3>
-        <p class="text-grey pt-4 text-sm group-hover:text-white md:text-base">
-          Building and evaluating ML pipelines for business problems.
-        </p>
-      </div>
-    </div>
-    <div class="group rounded px-8 py-12 shadow hover:bg-primary">
-      <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28 flex items-center justify-center">
-        <i class="bx bxs-dashboard text-6xl text-primary group-hover:text-yellow"></i>
-      </div>
-      <div class="text-center">
-        <h3 class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow lg:text-xl">
-          BI &amp; Dashboards
-        </h3>
-        <p class="text-grey pt-4 text-sm group-hover:text-white md:text-base">
-          Interactive reports and dashboards using Power BI.
-        </p>
-      </div>
-    </div>
-    
-    <div class="group rounded px-8 py-12 shadow hover:bg-primary">
-      <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28 flex items-center justify-center">
-        <i class="bx bx-group text-6xl text-primary group-hover:text-yellow"></i>
-      </div>
-      <div class="text-center">
-        <h3 class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow lg:text-xl">
-          Leadership & Coaching
-        </h3>
-        <p class="text-grey pt-4 text-sm group-hover:text-white md:text-base">
-          Guiding teams and mentoring students, drawing from rich military and athletic coaching experience.
-        </p>
-      </div>
-    </div>
-    <div class="group rounded px-8 py-12 shadow hover:bg-primary">
-      <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28 flex items-center justify-center">
-        <i class="bx bx-data text-6xl text-primary group-hover:text-yellow"></i>
-      </div>
-      <div class="text-center">
-        <h3 class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow lg:text-xl">
-          Database Design
-        </h3>
-        <p class="text-grey pt-4 text-sm group-hover:text-white md:text-base">
-          Relational databases, SQL queries, and cloud data storage.
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
 
 <div 
   class="container py-16 md:py-20" 
@@ -1089,25 +959,7 @@
     <p class="text-center font-body text-white md:text-left">
       © Copyright 2022. • Distributed by <a href="https://themewagon.com" target="_blank">ThemeWagon</a> •  All right reserved, ATOM.
     </p>
-    <div class="flex items-center justify-center pt-5 sm:justify-start sm:pt-0">
-      <a href="/">
-        <i
-          class="bx bxl-facebook-square text-2xl text-white hover:text-yellow"
-        ></i>
-      </a>
-      <a href="/" class="pl-4">
-        <i class="bx bxl-twitter text-2xl text-white hover:text-yellow"></i>
-      </a>
-      <a href="/" class="pl-4">
-        <i class="bx bxl-dribbble text-2xl text-white hover:text-yellow"></i>
-      </a>
-      <a href="/" class="pl-4">
-        <i class="bx bxl-linkedin text-2xl text-white hover:text-yellow"></i>
-      </a>
-      <a href="/" class="pl-4">
-        <i class="bx bxl-instagram text-2xl text-white hover:text-yellow"></i>
-      </a>
-    </div>
+
   </div>
 </div>
 
